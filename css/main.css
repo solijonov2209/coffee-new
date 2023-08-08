@@ -26,6 +26,7 @@
        url('../fonts/barlow-v12-latin-700.woff2') format('woff2'), 
        url('../fonts/barlow-v12-latin-700.woff') format('woff');
 }
+
 :root {
   /* --main-text-color : #fff; */
   /* --main-bg-color : #fff; */
@@ -56,7 +57,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: --, "Arial", sans-serif;
+  font-family: "Barlow", "Arial", sans-serif;
+  background: #FEFCF7;
   /* animation: bodyDark 10s linear infinite; */
 }
 
@@ -201,8 +203,91 @@ transition:background-color 0.3s linear ;
 .hero__link:hover{
   background-color: #66D2CF;
 }
+/* Finish hero  */
 
 
+/* Start collection  */
+.collection{
+  padding-top: 85px;
+  padding-bottom: 120px;
+  background-image: url("../images/Group\ 7.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 0;
+}
+.collection__img{
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+/* .collection__title{
+  text-align: center;
+  font-family: Fraunces;
+  font-size: 40px;
+  color: #83888F;
+font-style: normal;
+font-weight: 900;
+text-align: center;
+line-height: 72px; /* 180% 
+} */
+.collecion__list{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.collection__item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+
+}
+.collection__item:not(:last-child){
+  margin-bottom: 44px;
+}
+.collection__content{
+  max-width: 282px;
+  width: 100%;
+}
+.collection__subtitle{
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333D4B;
+font-family:'Fraunces';
+font-size: 24px;
+font-weight: 900;
+line-height: 32px; /* 133.333% */
+}
+.collection__desc{
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333D4B;
+font-family: 'Barlow';
+font-size: 15px;
+font-weight: 400;
+line-height: 25px; /* 166.667% */
+}
+/* Finish collection  */
+
+
+@media only screen and (min-width: 530px){
+  /* start collection  */
+  .collection{
+    padding-top: 75px;
+  }
+  .collection__img{
+    margin-bottom: 0;
+  }
+  
+  .collection__content{
+    max-width: 282px;
+    width: 100%;
+    margin-top: 20px;
+}
+/* finish collection  */
+}
 
 @media only screen and (min-width: 640px) { 
 .site-header{
@@ -243,9 +328,42 @@ transition:background-color 0.3s linear ;
     max-width: 398px;
   }
   /* finish hero  */
+
+  /* start collection  */
+  .collection{
+    padding-top: 70px;
+    background-image: url("../images/Group\ 13.svg");
+    background-size: 600px 118px;
+  }
+  .collecion__list{
+    text-align: start;
+  }
+  .collection__img{
+    max-width: 255px;
+    width: 100%;
+    height: 193px;
+    margin-right: 36px;
+  }
+  .collection__content{
+    margin-top: 30px;
+  }
+  /* finish collection  */
 }
 
-
+@media only screen and (min-width: 768px){
+  /* start collection  */
+  .collection{
+    padding-bottom: 186px;
+    background-size: 698px 118px;
+  }
+  .collection__item{
+    margin-bottom: 32px;
+  }
+  .collection__subtitle{
+    margin-bottom: 24px;
+  }
+  /* finish collection  */
+}
 @media only screen and (min-width: 1024px) {
   .site-header{
    padding-top: 43px;
@@ -278,4 +396,65 @@ transition:background-color 0.3s linear ;
     font-size: 16px;
     line-height: 26px;
   }
+  /* finish hero  */
+
+  /* start collection  */
+  .collection{
+    background-size: 900px  120px;
+  }
+  .collecion__list{
+    display: flex;
+justify-content: center;
+    flex-wrap: wrap;
+  }
+  .collection__item{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  .collection__img{
+    margin-right: 0;
+  }
+  /* collection fnish  */
+}
+@media only screen and (min-width: 1170px){
+/* start collection  */
+.collection{
+  padding-top: 126px;
+  background-image: url("../images/Group\ 13\ \(1\).svg");
+  background-size: 1111px 196px;
+}
+.collection__img{
+  max-width: 256px;
+  width: 100%;
+  height: 193px;
+  margin-bottom: 71px;
+}
+.collection__content{
+  margin-top: 0;
+}
+.collection__item{
+  max-width: 256px;
+  width: 100%;
+  margin-right: 30px;
+}
+.collection__item:nth-child(1) .collection__img{
+ max-width:255px ;
+ width: 100%;
+}
+.collection__item:nth-child(4) .collection__img{
+  max-width:235px ;
+  width: 100%;
+  }
+  .collection__item:nth-child(4){
+    margin-top: -15px;
+    margin-right: 0px;
+
+    }
+    .collection__desc{
+      font-size: 16px;
+      line-height: 26px;
+    }
 };
